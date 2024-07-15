@@ -1,0 +1,377 @@
+{
+  "Uuid": "3a19ad7d-5106-436d-8d08-edf551404f92",
+  "IsCustomNode": true,
+  "Category": "TBW.create.profile",
+  "Description": "Create Profile",
+  "Name": "Create_Profile",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6906976e6ffd49bcb967dc87dbca40b8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "c2dbecee84ae4ab5a3db537dd88bdd61",
+          "Name": "station",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e08d00c3f0a4fa18abf03260a2b0951",
+          "Name": "elevation",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c21444a8edb4bc6bc23881e4491a4dc",
+          "Name": "StationElevation",
+          "Description": "StationElevation",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Civil3D.Geometry.StationElevation.StationElevation@double,double",
+      "Replication": "Auto",
+      "Description": "Station and Elevation\n\nStationElevation.StationElevation (station: double, elevation: double): StationElevation"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "b496f2afbf4643e1ad0d35d98e3684f3",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "5e29169510f8493f905f6636c0f15a4c",
+          "Name": "alignment",
+          "Description": "Alignment",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1afe26566632472eb4f504eb4760c52e",
+          "Name": "profilename",
+          "Description": "New profile name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b47348179de54e949b686e0dc08665de",
+          "Name": "vertices",
+          "Description": "List of stations and elevations\n\nStationElevation[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7769eafd76144c748bb5feb7615499cf",
+          "Name": "Profile",
+          "Description": "Profile",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Civil3D.Geometry.Profile.CreateLayoutProfile@Autodesk.Civil.DynamoNodes.Alignment,string,Civil3D.Geometry.StationElevation[]",
+      "Replication": "Auto",
+      "Description": "Create a Layout Profile by a list of stations and elevations\n\nProfile.CreateLayoutProfile (alignment: Alignment, profilename: string, vertices: StationElevation[]): Profile"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "station",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "0763e07f367c47b3aeaab9c9870763d4",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fbd75e4ecb3e45ccb42e5a01c3bbe8dc",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "elevation",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "2d786f72546a4dec923a05e4ca94a4fc",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "176ef7d7db56473cbe8eefd59da7d320",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "alignment",
+        "TypeName": "Autodesk.Civil.DynamoNodes.Alignment",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "65c149244da04aedbe8495e96fd35053",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "632188ba27c1401bbcd024acec3a5269",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "profilename",
+        "TypeName": "string",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "fbb363ec550a4441883b5572d240f503",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8e972067e6e44142a8fb7a420a2cf20e",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "ElementResolver": null,
+      "Symbol": "Profile",
+      "Id": "2dc6f88305aa4b8789a2f45e130c31ce",
+      "NodeType": "OutputNode",
+      "Inputs": [
+        {
+          "Id": "89b6556290ec48ce9d70a4ee3d6c3a24",
+          "Name": "",
+          "Description": "Output Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "0c21444a8edb4bc6bc23881e4491a4dc",
+      "End": "b47348179de54e949b686e0dc08665de",
+      "Id": "899b313b7d144d9a8ef818c1c8ca1c8f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7769eafd76144c748bb5feb7615499cf",
+      "End": "89b6556290ec48ce9d70a4ee3d6c3a24",
+      "Id": "8fe39147f0a9470c8ce6f7c1c3bb260c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fbd75e4ecb3e45ccb42e5a01c3bbe8dc",
+      "End": "c2dbecee84ae4ab5a3db537dd88bdd61",
+      "Id": "1d6f894b017d4129afaa32486f726daa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "176ef7d7db56473cbe8eefd59da7d320",
+      "End": "6e08d00c3f0a4fa18abf03260a2b0951",
+      "Id": "3de37fb949ea413ca54e4d7e01f714b5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "632188ba27c1401bbcd024acec3a5269",
+      "End": "5e29169510f8493f905f6636c0f15a4c",
+      "Id": "32f25f7db19a4ce8aa5b36d6bbd0d493",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8e972067e6e44142a8fb7a420a2cf20e",
+      "End": "1afe26566632472eb4f504eb4760c52e",
+      "Id": "85ad4c662f6346348a622412f46ac11f",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Arkance Systems",
+      "Version": "7.3.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "6906976e6ffd49bcb967dc87dbca40b8",
+        "b496f2afbf4643e1ad0d35d98e3684f3"
+      ]
+    }
+  ],
+  "Author": "None provided",
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.19.4.6671",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "6906976e6ffd49bcb967dc87dbca40b8",
+        "Name": "StationElevation.StationElevation",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 250.0,
+        "Y": 154.98962644109997
+      },
+      {
+        "Id": "b496f2afbf4643e1ad0d35d98e3684f3",
+        "Name": "Profile.CreateLayoutProfile",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 634.71469587511,
+        "Y": 0.0
+      },
+      {
+        "Id": "0763e07f367c47b3aeaab9c9870763d4",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 0.0
+      },
+      {
+        "Id": "2d786f72546a4dec923a05e4ca94a4fc",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 150.0
+      },
+      {
+        "Id": "65c149244da04aedbe8495e96fd35053",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 300.0
+      },
+      {
+        "Id": "fbb363ec550a4441883b5572d240f503",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 450.0
+      },
+      {
+        "Id": "2dc6f88305aa4b8789a2f45e130c31ce",
+        "Name": "Output",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 982.71469587510956,
+        "Y": 0.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

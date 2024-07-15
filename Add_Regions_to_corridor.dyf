@@ -1,0 +1,826 @@
+{
+  "Uuid": "60bcaf09-7e9c-421c-b65a-74b26d279de5",
+  "IsCustomNode": true,
+  "Category": "TBW.addregions.corridor",
+  "Description": "Add Regions to Corridor",
+  "Name": "Add_Regions_to_Corridor",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "44879a9e176a46b79b24739e0570c1ef",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "8ef16d62b78943c0b5e64adf23afb3fb",
+          "Name": "x",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aafa9f93ecbc4cca9a62e63bbce56242",
+          "Name": "y",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7eeb58669ed54dafb3f208ec7927125c",
+          "Name": "double",
+          "Description": "Result of division",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "/@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns division of x over y\n\n/ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "4e1cd959d55a485fa733fd5cb817da39",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "06b6f30c40824982bb46882248f2261f",
+          "Name": "x",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e12283a93e904a588a21c41045b7ff4e",
+          "Name": "y",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1a58472e90b04ccbbec7443c91720454",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "2ad0d0223edd430696cc8a430902bf2d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "dd306ea263424e28994ca6fddbae39f1",
+          "Name": "x",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96f561c033854eddbe860526ee623ff8",
+          "Name": "y",
+          "Description": "Integer or double value\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d8c911e3b94d45919df250c8178e1226",
+          "Name": "number",
+          "Description": "Result of the y input subtracted from the x input",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "-@var[]..[],var[]..[]",
+      "Replication": "Auto",
+      "Description": "Returns subtraction of x minus y\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "eda04b5590b4471399b2a019b5f749a2",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f2cb7e4950db466a83ec1bf23af4f7c4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "0.5;"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "304c6fe27b3a4c2396575cf35fe27c7a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "97bea281bf244010bbf8a03e825cc783",
+          "Name": "corridor",
+          "Description": "Autodesk.Civil.DynamoNodes.Corridor",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e1c48ae551ae43c18299c5026a5bba5a",
+          "Name": "Baseline[]",
+          "Description": "Baseline[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.Corridor.Baselines",
+      "Replication": "Auto",
+      "Description": "Get all baselines from the corridor.\n\nCorridor.Baselines: Baseline[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "143950c690f543d7a3ec6a4d28512c1b",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1590b46468ee49e7b75f3acd6d601cba",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "5;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "Id": "ac2ed38e2d724099a5345a5a4a5291b5",
+      "NodeType": "BooleanInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "510e7d8580ac4c1bb81e5ed5c364d0c6",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False",
+      "InputValue": true
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "5013a1773ffe4196bd6a7defa485d6b8",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "d1caf2a558d44ff2a81c4fd4e41682cf",
+          "Name": "baseline",
+          "Description": "The Baseline\n\nBaseline",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1f8492e12d04791b67b908c3ce7e0be",
+          "Name": "name",
+          "Description": "The BaselineRegion name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": true,
+          "KeepListStructure": true
+        },
+        {
+          "Id": "d439cfac766b49f3a50e28267a62ba25",
+          "Name": "assemblyName",
+          "Description": "The assembly name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab32e89e43984e5db9364160c312636d",
+          "Name": "start",
+          "Description": "The starting station\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e80b59ee689b4e41a9446e19590b2669",
+          "Name": "end",
+          "Description": "The ending station\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "262c320511ca4bebaa069e1bb9fc58bf",
+          "Name": "curveFreq",
+          "Description": "The sampling frequency along alignment curves\n\ndouble\nDefault value : 5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb6e2c9e3a3d47498a44456d1c0ba386",
+          "Name": "profileFreq",
+          "Description": "The sampling frequency along profile curves\n\ndouble\nDefault value : 5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f109a64a94c24fbead875979d468cfd5",
+          "Name": "spiralFreq",
+          "Description": "The sampling frequency along alignment spirals\n\ndouble\nDefault value : 5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c7b956e43977497db9e51ae6dabae00c",
+          "Name": "tangentFreq",
+          "Description": "The sampling frequency along tangents\n\ndouble\nDefault value : 25",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f64a81e635c443b899f621a0953bf07",
+          "Name": "midOrdinate",
+          "Description": "The value of the mid-ordinate\n\ndouble\nDefault value : 0.1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96d1ce4e55784048a77981098b529732",
+          "Name": "curveOption",
+          "Description": "0-Increment, 1-Curvature, 2-Both\n\nint\nDefault value : 2",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "21440d17380346f1979f694b5b015340",
+          "Name": "targetOption",
+          "Description": "0-None, 1-Increment, 2-Curvature\n\nint\nDefault value : 2",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9404186a6bf744aaa9fe5c14fa85981b",
+          "Name": "rebuild",
+          "Description": "If true it rebuilds the corridor\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "48e2630123ed4da9a7dbd96443d450c0",
+          "Name": "BaselineRegion",
+          "Description": "BaselineRegion",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.CorridorExtensions.CorridorExtensions.AddRegion@Autodesk.Civil.DynamoNodes.Baseline,string,string,double,double,double,double,double,double,double,int,int,bool",
+      "Replication": "Auto",
+      "Description": "Adds a BaselineRegion to the Baseline\n\nCorridorExtensions.AddRegion (baseline: Baseline, name: string, assemblyName: string, start: double, end: double, curveFreq: double = 5, profileFreq: double = 5, spiralFreq: double = 5, tangentFreq: double = 25, midOrdinate: double = 0.1, curveOption: int = 2, targetOption: int = 2, rebuild: bool = false): BaselineRegion"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "SliderValue",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f8a17c168e3e43ad8e1a392a0f6112ec",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "62c09afec0ef4743999c060cf33c3470",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "Stations",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "2c89207693684956ad950d93b4977088",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5e7ee0f63cac4047818bd75252f0bd23",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "StationlessFirst",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "36413538e4a046bbaccd66ff2696b8aa",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d8c4e5c6e08f4035b1e8f42bcb25e4a6",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "corridor",
+        "TypeName": "Autodesk.Civil.DynamoNodes.Corridor",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "3b9ea3bc4f3e41fba7757ed9b013878b",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "debcd25eb82a45efb3a9e69203df6986",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "name",
+        "TypeName": "string",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "ef0b22b48bfd42d689c28c1c441cf53b",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b8b9e92e78564970aa53e3630cd39829",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "Parameter": {
+        "Name": "assemblyName",
+        "TypeName": "string",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "2f07b8f254a54f07a623ad2791dd5f66",
+      "NodeType": "InputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "10589af1c6ef4b97b3c154cbdd2f7776",
+          "Name": "",
+          "Description": "Input Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "ElementResolver": null,
+      "Symbol": "BaselineRegion",
+      "Id": "77eadaada9514e8db6de2dc69414cb86",
+      "NodeType": "OutputNode",
+      "Inputs": [
+        {
+          "Id": "4ea4e0315e66437dbe06b8c16876b4b2",
+          "Name": "",
+          "Description": "Output Data",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7eeb58669ed54dafb3f208ec7927125c",
+      "End": "e12283a93e904a588a21c41045b7ff4e",
+      "Id": "02e4b4f0f8554fe4872fecfa3e851d10",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7eeb58669ed54dafb3f208ec7927125c",
+      "End": "96f561c033854eddbe860526ee623ff8",
+      "Id": "1cdc294207ba40bf94c10ff48f9436ea",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1a58472e90b04ccbbec7443c91720454",
+      "End": "ab32e89e43984e5db9364160c312636d",
+      "Id": "3c3142846d5c4b3dad4a8607352c7019",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d8c911e3b94d45919df250c8178e1226",
+      "End": "e80b59ee689b4e41a9446e19590b2669",
+      "Id": "1ba7aeaad64548f992735f4a63c4a388",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f2cb7e4950db466a83ec1bf23af4f7c4",
+      "End": "aafa9f93ecbc4cca9a62e63bbce56242",
+      "Id": "64e579ca5c1e45e0833d4174c465fe63",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e1c48ae551ae43c18299c5026a5bba5a",
+      "End": "d1caf2a558d44ff2a81c4fd4e41682cf",
+      "Id": "c2c7d83fcd2c40719f726adee7e2e3fb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1590b46468ee49e7b75f3acd6d601cba",
+      "End": "c7b956e43977497db9e51ae6dabae00c",
+      "Id": "60709829e1f041e1b54af9144e6c8eda",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1590b46468ee49e7b75f3acd6d601cba",
+      "End": "262c320511ca4bebaa069e1bb9fc58bf",
+      "Id": "b3f9fc81ae904a74999969f8be471b53",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "510e7d8580ac4c1bb81e5ed5c364d0c6",
+      "End": "9404186a6bf744aaa9fe5c14fa85981b",
+      "Id": "eee039b1b73e4244aadbca61f9849960",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "48e2630123ed4da9a7dbd96443d450c0",
+      "End": "4ea4e0315e66437dbe06b8c16876b4b2",
+      "Id": "dc397327a516433b8e36fee73cd49291",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "62c09afec0ef4743999c060cf33c3470",
+      "End": "8ef16d62b78943c0b5e64adf23afb3fb",
+      "Id": "ba6379ad901248629239d9ca6d50a828",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5e7ee0f63cac4047818bd75252f0bd23",
+      "End": "06b6f30c40824982bb46882248f2261f",
+      "Id": "b97005aa4c8d453ca34194c9096e81e2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d8c4e5c6e08f4035b1e8f42bcb25e4a6",
+      "End": "dd306ea263424e28994ca6fddbae39f1",
+      "Id": "c17e379cb05b4a76803bea13f6213330",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "debcd25eb82a45efb3a9e69203df6986",
+      "End": "97bea281bf244010bbf8a03e825cc783",
+      "Id": "216899b7aede4cb1b6bfdee5d11b2028",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b8b9e92e78564970aa53e3630cd39829",
+      "End": "a1f8492e12d04791b67b908c3ce7e0be",
+      "Id": "dfe0a782d7404210916f37c21cb6a9d4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "10589af1c6ef4b97b3c154cbdd2f7776",
+      "End": "d439cfac766b49f3a50e28267a62ba25",
+      "Id": "73cfed5737d34097b8e01f3eb1ac26ad",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Civil3DToolkit",
+      "Version": "1.1.32",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "5013a1773ffe4196bd6a7defa485d6b8"
+      ]
+    }
+  ],
+  "Author": "None provided",
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.19.4.6671",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "44879a9e176a46b79b24739e0570c1ef",
+        "Name": "/",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 459.36347628109979,
+        "Y": 175.2914621659902
+      },
+      {
+        "Id": "4e1cd959d55a485fa733fd5cb817da39",
+        "Name": "+",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 768.77469314900009,
+        "Y": 0.0
+      },
+      {
+        "Id": "2ad0d0223edd430696cc8a430902bf2d",
+        "Name": "-",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 768.01227619530982,
+        "Y": 272.88003091759992
+      },
+      {
+        "Id": "eda04b5590b4471399b2a019b5f749a2",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 250.0,
+        "Y": 324.10755386315032
+      },
+      {
+        "Id": "304c6fe27b3a4c2396575cf35fe27c7a",
+        "Name": "Corridor.Baselines",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1328.8352618523804,
+        "Y": 60.259739005280153
+      },
+      {
+        "Id": "143950c690f543d7a3ec6a4d28512c1b",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1524.5775040057706,
+        "Y": 696.56110644892988
+      },
+      {
+        "Id": "ac2ed38e2d724099a5345a5a4a5291b5",
+        "Name": "Boolean",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1493.2506305464203,
+        "Y": 874.78859337228
+      },
+      {
+        "Id": "5013a1773ffe4196bd6a7defa485d6b8",
+        "Name": "CorridorExtensions.AddRegion",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1802.9981317358697,
+        "Y": 422.80415047112
+      },
+      {
+        "Id": "f8a17c168e3e43ad8e1a392a0f6112ec",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 0.0
+      },
+      {
+        "Id": "2c89207693684956ad950d93b4977088",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 150.0
+      },
+      {
+        "Id": "36413538e4a046bbaccd66ff2696b8aa",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -81.3017954898886,
+        "Y": 314.51817776605151
+      },
+      {
+        "Id": "3b9ea3bc4f3e41fba7757ed9b013878b",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 450.0
+      },
+      {
+        "Id": "ef0b22b48bfd42d689c28c1c441cf53b",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 600.0
+      },
+      {
+        "Id": "2f07b8f254a54f07a623ad2791dd5f66",
+        "Name": "Input",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 0.0,
+        "Y": 750.0
+      },
+      {
+        "Id": "77eadaada9514e8db6de2dc69414cb86",
+        "Name": "Output",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 2183.9981317358697,
+        "Y": 0.0
+      }
+    ],
+    "Annotations": [],
+    "X": 258.62606309326827,
+    "Y": 110.25596266032224,
+    "Zoom": 0.82770257044119067
+  }
+}
